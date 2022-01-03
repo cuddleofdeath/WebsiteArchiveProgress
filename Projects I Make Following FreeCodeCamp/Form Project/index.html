@@ -7,19 +7,22 @@
     </head>
 
     <body>
+        <div class="container">
+        <header class="header">
         <h1 id="title" class="center-text">Form Title</h1>
-        <p id="description center-text">My form's description will go here. For now, this is simply a placeholder.
+        <p id="description" class="center-text">My form's description will go here. For now, this description is a placeholder.
         </p>
-    
+        </header>
+
         <form id="survey-form">
             <div class="forms">
             <label id="namelabel" for "name">Name</label>
-            <input type="text" name="name" id="name" placeholder="Enter your name" required />
+            <input type="text" name="name" id="name" placeholder="Enter your name" class="form-control" required />
             </div>
 
             <div class="forms">
             <label id="emaillabel" for="email">E-mail</label>
-            <input type="email" name="email" id="email" placeholder="Enter your E-mail address" required />
+            <input type="email" name="email" id="email" placeholder="Enter your E-mail address" class="form-control" required />
             </div>
 
             <div class="forms">
@@ -47,7 +50,34 @@
 
             <div class="forms">
                 <p>What was your favorite question to answer?</p>
+                <select id="fav-question" name="fav-question" class="form-control" required>
+                    <option disabled selected value>Select an option</option>
+                    <option value="thefirst">The first one</option>
+                    <option value="thesecond">The second one</option>
+                    <option value="thethird">The third one</option>
+                    <option value="thefourth">The fourth one</option>
+                </select>
             </div>
+
+            <div class="forms">
+                <p>How could this form be improved? <span class="clue">(Check all that apply)</span></p>
+
+                <label><input name="preference" value="better-color-scheme" type="checkbox" class="input-checkbox" />Better color scheme</label>
+                <label><input name="preference" value="more-questions" type="checkbox" class="input-checkbox" / > More questions</label>
+                <label><input name="preference" value="less-questions" type="checkbox" class="input-checkbox" / > Less questions</label>
+                <label><input name="preference" value="more-cowbell" type="checkbox" class="input-checkbox" / > More cowbell</label>
+            </div>
+
+            <div class="forms">
+                <p>Any additional feedback or suggestions?</p>
+                <textarea id="comments" class="input-textarea" name="comment" placeholder="Enter your comment here..."></textarea>
+            </div>
+
+            <div class="forms">
+                <button type="submit" id="submit" class="submit-button">Submit</button>
+            </div>
+
         </form>
     </body>
 </html>
+</div>
