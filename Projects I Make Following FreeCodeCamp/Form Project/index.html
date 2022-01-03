@@ -7,28 +7,47 @@
     </head>
 
     <body>
-        <h1 id="title">Form Title</h1>
-        <p id="description">My form's description will go here. For now, this is simply a placeholder.
+        <h1 id="title" class="center-text">Form Title</h1>
+        <p id="description center-text">My form's description will go here. For now, this is simply a placeholder.
         </p>
     
         <form id="survey-form">
+            <div class="forms">
             <label id="namelabel" for "name">Name</label>
             <input type="text" name="name" id="name" placeholder="Enter your name" required />
+            </div>
 
+            <div class="forms">
             <label id="emaillabel" for="email">E-mail</label>
             <input type="email" name="email" id="email" placeholder="Enter your E-mail address" required />
+            </div>
 
+            <div class="forms">
             <label id="agelabel" for="number">Age<span class="clue">(optional)</span></label>
-            <input type="number" name="age" id="number" min="13" max="120" placeholder="Age" />
-        
+            <input type="number" name="age" id="number" min="13" max="120" class="form-control" placeholder="Age" />
+            </div>
+
+            <div class="forms">
             <p>Here is a placeholder question?</p>
-            <select id="dropdown" name="placeholderName" required>
+            <select id="dropdown" name="placeholderName" class="form-control" required>
                 <option disabled selected value>Select the best option</option>
                 <option value="option1">Option 1</option>
                 <option value="option2">Option 2</option>
                 <option value="option3">Option 3</option>
                 <option value="option4">Option 4</option>   
             </select>
+            </div>
+
+            <div class="forms">
+                <p>Is this another question?</p>
+                <label><input name="useranswer" value="yes" type="radio" class="input-radio" checked>Yes</label>
+                <label><input name="useranswer" value="no" type="radio" class="input-radio"/>No</label>
+                <label><input name="useranswer" value="not-sure" type="radio" class="input-radio">Not sure</label>
+            </div>
+
+            <div class="forms">
+                <p>What was your favorite question to answer?</p>
+            </div>
         </form>
     </body>
 </html>
