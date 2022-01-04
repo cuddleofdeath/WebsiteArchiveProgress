@@ -1,0 +1,3 @@
+This code is not something that I wrote on my own and I do not take credit. I was simply following along with the Rothko painting section of the beta version for the responsive web design lesson (on freeCodeCamp.org).
+
+After successfully completing the section, I figured it would be great to recreate the code and archive it. This way, it can be referenced in the future for creating other cool paintings.
