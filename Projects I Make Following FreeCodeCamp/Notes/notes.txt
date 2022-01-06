@@ -32,7 +32,16 @@ nav > ul {
 }
 
 
-Things I need to look up:
+                                    Things I need to look up:
 1. What is an em? I know what a rem is, but what is em?
 2. what does the 'clear' property really do? How does it work?
 3. Learn more about the vw measuring unit.
+
+
+                                      HTML Things that I learned:
+1. When creating a link to a form, the proper way to go about it looks something like this:
+<form method="post" action="https://randomlinkthatmayormaynotgosomewheredontclickit/please/formsubmit">
+<section>Section test</section>
+<section>Section test 2</section>
+<section>Section test 3</section>
+</form>
