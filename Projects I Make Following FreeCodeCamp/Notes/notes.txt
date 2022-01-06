@@ -7,3 +7,6 @@ They may not be organized or anything yet.
                                                 CSS Tips:
 1. If an element is overlapping another element, use the overflow: hidden; option within the element in question.
 
+Things I learned:
+<meta charset="UTF-8">
+The charset attribute specifies the character encoding of the page, and nowadays, UTF-8 is the only encoding supported by most browsers.
