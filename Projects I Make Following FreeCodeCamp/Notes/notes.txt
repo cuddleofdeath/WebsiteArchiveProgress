@@ -19,3 +19,4 @@ aspect-ratio: 16/9;
 Things I need to look up:
 1. What is an em? I know what a rem is, but what is em?
 2. what does the 'clear' property really do? How does it work?
+3. Learn more about the vw measuring unit.
