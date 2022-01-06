@@ -16,6 +16,22 @@ Another thing I learned:
 aspect-ratio: 16/9;
 (This seemed pretty obvious, but it's also something I may easily forget, so I figured writing it down would be a great idea :))
 
+You can target specific elements nested within other elements by writing code like this:
+elementName > nestedElement {
+  
+}
+
+Then you can insert whatever css formatting you'd like.
+
+For example, if you had unordered list elements nested within the nav element, you could use
+this code to evenly space the children (ul [the list] - in this case.)
+
+nav > ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
 Things I need to look up:
 1. What is an em? I know what a rem is, but what is em?
 2. what does the 'clear' property really do? How does it work?
