@@ -10,3 +10,7 @@ They may not be organized or anything yet.
 Things I learned:
 <meta charset="UTF-8">
 The charset attribute specifies the character encoding of the page, and nowadays, UTF-8 is the only encoding supported by most browsers.
+
+Things I need to look up:
+1. What is an em? I know what a rem is, but what is em?
+2. what does the 'clear' property really do? How does it work?
