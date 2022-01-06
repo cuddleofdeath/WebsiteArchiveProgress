@@ -48,6 +48,24 @@ nav > ul {
 
 2. **accessibility** The role attribute. "To increase a page's accessibility, the role attribute can be used to help
 indicate the purpose behind an element on the page to assistive technologies. The role
-attirubteis a part of the web accessibility initiative (WAI), and accepts preset values."
+attirubte is a part of the web accessibility initiative (WAI), and accepts preset values."
 (This quote is from freecodecamp.org's "Learn accessibility by building a quiz" section
 of their new, beta version of Responsive Web Design - step 15.)
+
+3. **accessibility continued** Every region role requires a visible label. This should be
+referenced by the aria-labelledby attribute. 
+
+For example, take this code into account:
+<section role="region" aria-labelledby="facility-info"><h2 id="facility-info">Facility Information</h2></section>
+
+4. Whenever you are trying to link to a section of a page, using a # in front of the id helps.
+For example:
+
+<ul>
+<li><a href="#booking-info">Booking Info</a></li>
+</ul>
+
+This is just a single element on a list. However, by having the id of #booking-info,
+clicking that would simply take the user to that section of the page.
+
+It's like skipping to a certain chapter in a book.
