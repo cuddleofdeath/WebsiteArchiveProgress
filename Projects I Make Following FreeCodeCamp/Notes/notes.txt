@@ -11,6 +11,11 @@ Things I learned:
 <meta charset="UTF-8">
 The charset attribute specifies the character encoding of the page, and nowadays, UTF-8 is the only encoding supported by most browsers.
 
+Another thing I learned:
+- Whenever setting the aspect-ratio in CSS, you can set something, like....16:9 [1080p], by simply using:
+aspect-ratio: 16/9;
+(This seemed pretty obvious, but it's also something I may easily forget, so I figured writing it down would be a great idea :))
+
 Things I need to look up:
 1. What is an em? I know what a rem is, but what is em?
 2. what does the 'clear' property really do? How does it work?
