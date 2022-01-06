@@ -45,3 +45,9 @@ nav > ul {
 <section>Section test 2</section>
 <section>Section test 3</section>
 </form>
+
+2. **accessibility** The role attribute. "To increase a page's accessibility, the role attribute can be used to help
+indicate the purpose behind an element on the page to assistive technologies. The role
+attirubteis a part of the web accessibility initiative (WAI), and accepts preset values."
+(This quote is from freecodecamp.org's "Learn accessibility by building a quiz" section
+of their new, beta version of Responsive Web Design - step 15.)
