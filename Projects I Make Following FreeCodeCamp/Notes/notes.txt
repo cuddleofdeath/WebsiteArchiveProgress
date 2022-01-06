@@ -3,3 +3,7 @@ skills that I learn. For now, however, I will simply just compile
 a list of notes here. 
 
 They may not be organized or anything yet.
+
+                                                CSS Tips:
+1. If an element is overlapping another element, use the overflow: hidden; option within the element in question.
+
