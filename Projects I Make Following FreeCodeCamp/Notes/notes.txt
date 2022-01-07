@@ -69,3 +69,29 @@ This is just a single element on a list. However, by having the id of #booking-i
 clicking that would simply take the user to that section of the page.
 
 It's like skipping to a certain chapter in a book.
+
+5. **accessibility tip** Sometimes, adding placeholder text inside of an input type (in HTML)
+is not the best way to go for accessibility. According to freeCodeCamp, "Too often, users
+confuse the placeholdertext with an actual input value. They think
+there is already a value in the input.
+
+<div class="info">
+  <label for="student-name">Name</label>
+  <input type="text" name="student-name" id="student-name" placeholder="eg Ryan Reynolds" />
+  </div>
+
+  The above text would create a Name field, allowing the user to input
+  their name in text form. However, the above would display a muted/grey colored "Ryan Reynolds", which
+  some may confuse for already-filled in text. This can cause the user
+  to mistake the field as something that shouldn't be filled in. 
+
+  Removing this line makes it more obvious that it requires text input for that field.
+
+  <div class="info">
+    <label for="student-name">Name</label>
+    <input type="text" name="student-name" id="student-name" />
+    </div>
+
+    This would remove the placeholder text for the name "Ryan Reynolds"
+
+    
