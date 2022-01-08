@@ -32,6 +32,17 @@ nav > ul {
 }
 
 
+2. Using pseudo elements can help space content. 
+
+For example:
+
+p::before {
+  content: "Question #";
+}
+
+This can be used to have the Question number on a form visible prior to the question and the options.
+This would obviously depend on how you set up your HTML document, as it would need to be set up accordingly.
+
                                     Things I need to look up:
 1. What is an em? I know what a rem is, but what is em?
 2. what does the 'clear' property really do? How does it work?
