@@ -70,6 +70,24 @@ Easy example:
 * {
   scroll-behavior: smooth;
 }
+
+6. Although a smooth scroll-behavior is preferred by most users, some users find the scroll speed to be too slow. There is a 
+rule that allows us to set the CSS based on the user's browser settings. 
+
+  This rule is called the prefers-reduced-motion rule, which requires one of the following values:
+
+  - reduce
+  - no-preference
+
+  So,  we can take our previous example above (#5), and implement this rule below:
+
+  @media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+}
+
+
                                     Things I need to look up:
 1. What is an em? I know what a rem is, but what is em?
 2. what does the 'clear' property really do? How does it work?
