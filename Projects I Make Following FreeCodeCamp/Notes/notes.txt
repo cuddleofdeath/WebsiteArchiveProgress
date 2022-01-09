@@ -48,6 +48,18 @@ bottom of your site...and it has hyperlinks, but we don't want the underline) wi
 would normally be present by default. (for example, by default, a href/links automatically will be underlined
 unless text-decoration: none; is applied.)
 
+4. Removing padding on other elements! Okay, so, you may have built a cool site so far, but some of your elements
+are spaced incorrectly due to not having the individual element's padding set. So, by default, it may go by another element's 
+CSS style previously defined in your document. Because of this, certain sections of a website can start to look out of place.
+
+To fix this, simply target the correct element, and remove padding by adding:
+padding: 0;
+
+For a full example,
+
+.classname {
+  padding: 0;
+}
                                     Things I need to look up:
 1. What is an em? I know what a rem is, but what is em?
 2. what does the 'clear' property really do? How does it work?
