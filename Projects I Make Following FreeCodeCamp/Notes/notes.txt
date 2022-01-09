@@ -60,6 +60,16 @@ For a full example,
 .classname {
   padding: 0;
 }
+
+5. Using 'scroll-behavior: smooth;', especially in all elements (using the * selector) is great practice whenever you have
+links to sections of your page. Instead of it just jumping to the section, which can be disorienting for some users, it will
+have a smooth scroll effect. 
+
+Easy example:
+
+* {
+  scroll-behavior: smooth;
+}
                                     Things I need to look up:
 1. What is an em? I know what a rem is, but what is em?
 2. what does the 'clear' property really do? How does it work?
