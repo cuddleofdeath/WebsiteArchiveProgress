@@ -43,6 +43,11 @@ p::before {
 This can be used to have the Question number on a form visible prior to the question and the options.
 This would obviously depend on how you set up your HTML document, as it would need to be set up accordingly.
 
+3. Using 'text-decoration: none;' on another class (for example, let's say you have a contact section at the 
+bottom of your site...and it has hyperlinks, but we don't want the underline) will omit any general decoration that
+would normally be present by default. (for example, by default, a href/links automatically will be underlined
+unless text-decoration: none; is applied.)
+
                                     Things I need to look up:
 1. What is an em? I know what a rem is, but what is em?
 2. what does the 'clear' property really do? How does it work?
