@@ -1,0 +1,21 @@
+/* * {
+  text-align: center;
+  background-color: bisque;
+} */
+
+h1 {
+  font-weight: 800;
+}
+
+
+
+/* .note-top {
+  background-color: coral;
+  
+  
+} */
+
+div  {
+  background: rgba(255, 0, 0, 0.3);
+  text-align: center;
+}

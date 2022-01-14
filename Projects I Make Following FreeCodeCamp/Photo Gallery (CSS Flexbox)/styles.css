@@ -1,7 +1,20 @@
 * {
-    box-sizing: border-box;
+    font-size: 20px;
   }
   
+ html {
+     font-size: 20px;
+ } 
+
+ .className {
+     font-size: .5rem;
+ }
+
+ .classTwo {
+     font-size: 2rem;
+ }
+
+
   body {
     margin: 0;
     font-family: Arial;
