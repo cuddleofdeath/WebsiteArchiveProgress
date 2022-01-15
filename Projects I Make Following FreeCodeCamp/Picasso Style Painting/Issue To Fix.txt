@@ -1,0 +1,4 @@
+Issue to resolve:
+So, the code itself is technically complete in regards to the freecodecamp lesson. However, I noticed that it's not actually a responsive design! 
+
+So, I want to come back to this later and tweak the CSS to make it responsive.
