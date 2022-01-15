@@ -208,4 +208,14 @@ According to freeCodeCamp - "Note: It is not always advised to use access keys, 
 <img class="imgclassname" src="catphoto.png" alt="alt text" loading="lazy">
 
 Now, whenever someone scrolls to the point on the page where that photo would be, the image will now (lazy) load.
+    9. Something to remember about links (a href):
+    By default, a (base) link looks like this:
+    <a href="https://randomlinkthatmayormaynotgoanywherehopefullyitdoesnt.com>Text here</a>
 
+  Obviously, there are various attributes we can add (like alt text  and stuff), however...if a person were to click on the link above, as is, it would open the link on the same tab that the user currently has active on their page.
+
+  By adding a target="_blank" attribute, the link will open up in a new tab instead.
+
+  <a href="https://www.rcmzlkcm09i42.com" target="_blank">Text here</a>
+
+This new link would open up in a brand new tab.
