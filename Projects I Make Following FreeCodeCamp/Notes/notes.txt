@@ -94,7 +94,7 @@ rule that allows us to set the CSS based on the user's browser settings.
 
   So, if you were to have one that had the max-width of 1000px, it would be written like this:
   @media (max-width: 1000px) {
-    
+
   }
 
                                     Things I need to look up:
@@ -195,4 +195,17 @@ there is already a value in the input.
 			  </ul>
 
 According to freeCodeCamp - "Note: It is not always advised to use access keys, but they can be useful"
+    8. The 'loading' attribute. 
+
+    The loading attribute on HTML elements can be set to 'lazy' to tell the browser not to fetch the image resources until it's needed (such as whenever a user scrolls the image into view). This means users with slow internet connections can view the content of your page without having to wait for the images to load.
+
+    So, a normal image link looks a bit like this:
+    <img class="imgclassname" src="catphoto.png" alt="alt text">
+
+    This is just a simple image class that contains a cat photo with the alt text of 'alt text.'
+
+    If we were to write this with the loading attribute set to lazy, it would simply look like this:
+<img class="imgclassname" src="catphoto.png" alt="alt text" loading="lazy">
+
+Now, whenever someone scrolls to the point on the page where that photo would be, the image will now (lazy) load.
 
