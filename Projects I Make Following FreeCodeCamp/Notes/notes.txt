@@ -87,6 +87,15 @@ rule that allows us to set the CSS based on the user's browser settings.
   }
 }
 
+7. A media query can be used to change styles based on certain conditions, and they look like this:
+  @media (condition) {
+
+  }
+
+  So, if you were to have one that had the max-width of 1000px, it would be written like this:
+  @media (max-width: 1000px) {
+    
+  }
 
                                     Things I need to look up:
 1. What is an em? I know what a rem is, but what is em?
