@@ -97,6 +97,18 @@ rule that allows us to set the CSS based on the user's browser settings.
 
   }
 
+8.                      **CSS GRID TIP**
+  Adding the 'grid-template-columns' activates CSS grid essentially, this property allows you to customize the column layout.
+
+  For example, see this CSS code below:
+  main {
+    display: grid;
+    grid-template-columns: 1fr 94rem 1fr;
+  }
+
+  This will create three coluimns where the middle column is 94rem wide, and the first and last columns are both 1 fraction of the remaining space in the grid container.
+
+
                                     Things I need to look up:
 1. What is an em? I know what a rem is, but what is em?
 2. what does the 'clear' property really do? How does it work?
@@ -219,3 +231,10 @@ Now, whenever someone scrolls to the point on the page where that photo would be
   <a href="https://www.rcmzlkcm09i42.com" target="_blank">Text here</a>
 
 This new link would open up in a brand new tab.
+    10. Link 'referrals' and analytics:
+    By default, whenever a user clicks a link to go to another page, the HTTP header contains info about the address or URL of a page that a user might be visiting this from. This can be very useful for analytics to track how many users from your page visit whatever designated site that your link goes to.
+
+    It is, however, possible to omit this information.
+
+    If we add the 'noreferrer' attribute, it omits the information:
+    <a href="https://www.fakelinkthatgoesnowhereordoesit.com" target="_blank" rel="noreferrer">Text here</a>
