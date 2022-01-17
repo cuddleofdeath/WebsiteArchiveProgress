@@ -1,0 +1,3 @@
+I, CuddleofDeath, did not write the code in this section of the repository. It is from the freeCodeCamp Responsive Web Design (beta) course (Specifically the "Learn CSS Animation by Building a Ferris Wheel" section.)
+
+It is meant to be used as archived content, to be referenced whenever. This way it can be used as educational material for those who are wanting to learn or brush up on their HTML or CSS.

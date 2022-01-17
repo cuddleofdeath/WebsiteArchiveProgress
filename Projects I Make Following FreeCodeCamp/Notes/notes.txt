@@ -331,6 +331,49 @@ rule that allows us to set the CSS based on the user's browser settings.
   cursor: not-allowed;
 
 }
+
+  28. transform-origin property. 
+
+  The transform-origin property is used to set the point around which a CSS transformation is applied. For example, when performing a rotate, the transform-origin determines around which point the element is rotated.
+
+  Observe the following code for reference:
+  .line {
+  background-color: black;
+  width: 50%;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: 0% 0%;
+}
+
+-----
+
+Observe the below code, this will set the origin point to be offset 50% from the left and 0% from the top, placing it in the middle of the top edge of the element.
+
+
+.cabin {
+  background-color: red;
+  width: 20%;
+  height: 20%;
+  position: absolute;
+  border: 2px solid;
+  transform-origin: 50% 0%;
+}
+
+  29. The 'animation' function (CSS) - 
+  You can use certain 'transition' styles like 'linear' and 'ease-in-out', observe the following code:
+
+  .cabin {
+  background-color: red;
+  width: 20%;
+  height: 20%;
+  position: absolute;
+  border: 2px solid;
+  transform-origin: 50% 0%;
+  animation: cabins 10s ease-in-out infinite;
+}
+
                                     Things I need to look up:
 1. What is an em? I know what a rem is, but what is em?
 2. what does the 'clear' property really do? How does it work?
