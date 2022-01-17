@@ -285,6 +285,52 @@ rule that allows us to set the CSS based on the user's browser settings.
   transform: rotate(130deg) scaleX(-1);
 }
 
+  25. CSS ANIMATIONS:
+  Animations have waypoints, you can set them by putting the starting % and then the arguments. 
+
+  Observe the code below:
+
+@keyframes wave {
+  10% {
+    transform: rotate(110deg) scaleX(-1);
+  }
+  20% {
+    transform: rotate(130deg) scaleX(-1);
+  }
+  30% {
+    transform: rotate(110deg) scaleX(-1);
+  }
+  40% {
+    transform: rotate(130deg) scaleX(-1);
+  }
+}
+
+  26. CSS Animation continued:
+    Honestly, I'm not sure what to say about this particular part of this note section. However, I am going to paste part of a code for reference to help!
+
+    Observe the following code:
+    .arm.left {
+  top: 35%;
+  left: 5%;
+  transform-origin: top left; 
+  transform: rotate(130deg) scaleX(-1);
+  animation-name: wave;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+  27. CSS Cursors - change to not allowed. 
+
+  Sometimes, you'll want it set up to where a cursor does not display certain symbols when a person interacts with a page.
+
+  If you use 'cursor: not-allowed;', an error-shaped cursor will pop up whenever the person tries to drag the mouse around on the page (in the below code example)
+
+   .penguin:active {
+  transform: scale(1.5);
+  cursor: not-allowed;
+
+}
                                     Things I need to look up:
 1. What is an em? I know what a rem is, but what is em?
 2. what does the 'clear' property really do? How does it work?
