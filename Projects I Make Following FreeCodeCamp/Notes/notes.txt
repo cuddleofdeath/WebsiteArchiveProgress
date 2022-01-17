@@ -108,7 +108,87 @@ rule that allows us to set the CSS based on the user's browser settings.
 
   This will create three coluimns where the middle column is 94rem wide, and the first and last columns are both 1 fraction of the remaining space in the grid container.
 
+  9. Additional CSS Grid Tip:
+  Use the 'minmax' function to make your columns responsive on any device. 
 
+  The minmax function takes two arguments.
+  The first argument is the minimum value, the second argument is the maximum value. The values defined can be a length, percentage, fr, or even a keyword like 'max-content'.
+
+  Let's look at the CSS code below:
+
+  main {
+    display: grid;
+    grid-template-columns: minmax(2rem, 1fr) minmax(min-content, 94rem) minmax(2rem, 1fr);
+  }
+
+  (add more information regarding this later, right now I'm simply adding it so I remember it later :))
+
+  10. Regarding CSS, the 'repeat()' function is used to repeat a value, rather than writing it out manually, and is helpful for grid layouts. For example, setting the 'grid-template-columns' property to repeat(20, 200px) in the below example would create 20 columns each 200px wide:
+
+  .heading {
+    grid-column: 2/3;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  11. Using -1 in the grid-column property can tell the element to span the full width of the grid. Observe the code below:
+  .hero {
+    grid-column: 1 / -1
+  }
+
+  12. The default settings for CSS Grid will create additional rows as needed. The below code would arrange the elements (5 elements) 
+
+  The below code will create a 5 column grid arranged in a single row:
+  .social-icons {
+    display: grid;
+    font-size: 3rem;
+    grid-template-columns:  repeat(5, 1fr);
+  }
+
+  13. [CSS Grid] Regarding the 'grid-auto-flow' property, it can be used to add more elements on the same row. 
+
+  This property takes eeither row or column as the first value, with an optional value of dense. 'grid-auto-flow' uses an auto-placement algorithm to adjust the grid layout.
+
+  - Setting it to 'column' will tell the algorithm to create new columns for the content as needed.
+
+  - Setting it to 'dense' allows the algorithm to backtrack and fill holes in the grid with smaller items, which can result in items appearing out of order.
+
+  Observe the following code:
+  .social-icons {
+    display: grid;
+    font-size: 3rem;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-flow: column;
+  }
+
+  14. The grid-auto-flow: column; attribute can be written shorthand as 'grid-auto-columns'. Observe the code below:
+
+  .social-icons {
+    display: grid;
+    font-size: 3rem;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  }
+
+  15. [CSS Grid] Much like Flexbox, you can also use CSS Grid to align content of grid items with 'align-items' and 'justify-items'. 'align-items' will align child elements along the column axis, and 'justify-items' will align child elements along the row axis.
+
+  Observe the code below:
+    .social-icons {
+    display: grid;
+    font-size: 3rem;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    align-items: center;
+  }
+
+  16. **ACCESSIBILITY CSS** 
+    You can make your text look like a printed magazine by giving it the property of 'text-align: justify'. 
+
+    This can cause an accessibility concern, for example, presenting challenges for folks with dyslexia. 
+
+    
                                     Things I need to look up:
 1. What is an em? I know what a rem is, but what is em?
 2. what does the 'clear' property really do? How does it work?
