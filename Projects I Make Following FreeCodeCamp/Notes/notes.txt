@@ -220,6 +220,33 @@ rule that allows us to set the CSS based on the user's browser settings.
   }
 }
 
+  20. [might need to research this part] You can remove both the horizontal and vertical scrollbars, and prevent programmatic scrolling, using only one property: The 'overflow: clip' attribute.
+
+  Observe the code below:
+  body {
+  background: linear-gradient(45deg, rgb(118, 201, 255), rgb(247, 255, 222));
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: clip;
+}
+
+  21. 'skew' transform function. 
+
+  You can use the 'skew' transform function, which takes two arguments:
+  - The first is the angle to shear the x-axis by.
+  - The second is the angle to shear the y-axis by.
+
+  Observe the following code:
+  .left-mountain {
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(rgb(203, 241, 228), rgb(80, 183, 255));
+  position: absolute;
+  transform: skew(0deg, 44deg);
+}
+
                                     Things I need to look up:
 1. What is an em? I know what a rem is, but what is em?
 2. what does the 'clear' property really do? How does it work?
