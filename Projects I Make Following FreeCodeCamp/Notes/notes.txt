@@ -188,7 +188,38 @@ rule that allows us to set the CSS based on the user's browser settings.
 
     This can cause an accessibility concern, for example, presenting challenges for folks with dyslexia. 
 
-    
+  
+  17. (Pseudo Selector) - The ::first-letter pseudo-selector allows you to target the first letter in the text content of an element.
+
+  Observe the code below:
+  .first-paragraph::first-letter {
+    font-size: 6rem;
+    color: orangered;
+    float: left;
+    margin-right: 1rem;
+  }
+
+  This code, assigned to the 'first-paragraph' class, would change the first letter of the first paragraph to orangered.
+
+  18. The 'gap' property is a shorthand way to set the value of both column-gap and row-gap at the same time. If given one value, it sets both of them to that value.
+
+  gap: 2 rem; for example.
+
+  19. Example of responsivity with CSS Grid images:
+  @media only screen and (max-width: 720px) {
+    .image-wrapper {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  To collapse your bottom text area into a single column on smaller screens, use this css code as reference:
+
+@media only screen and (max-width: 600px) {
+  .text-with-images {
+    grid-template-columns: 1fr;
+  }
+}
+
                                     Things I need to look up:
 1. What is an em? I know what a rem is, but what is em?
 2. what does the 'clear' property really do? How does it work?
