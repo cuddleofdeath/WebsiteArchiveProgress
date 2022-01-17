@@ -239,12 +239,50 @@ rule that allows us to set the CSS based on the user's browser settings.
   - The second is the angle to shear the y-axis by.
 
   Observe the following code:
-  .left-mountain {
+.left-mountain {
   width: 300px;
   height: 300px;
   background: linear-gradient(rgb(203, 241, 228), rgb(80, 183, 255));
   position: absolute;
   transform: skew(0deg, 44deg);
+  z-index: 2;
+
+}
+
+  22. 'border-radius' attribute | CSS | The border attribute can take up to 4 arguments (I will research to see if it can take more later, this is just what I've learned for now...)
+
+  It takes the radius of the upper left corner, then upper right, then lower left, then lower right. [Check this for accuracy!!!!]
+
+  Observe the following code:
+  .penguin-head {
+  width: 50%;
+	height: 45%;
+  background: linear-gradient(
+		45deg,
+		gray,
+		rgb(239, 240, 228)
+	);
+  border-radius: 70% 70% 65% 65%;
+}
+
+  23. To target 'descendent elements' of a certain element, you would write it as:  
+  .elementname * {
+    code: code;
+  }
+
+  Observe the following code example:
+  .penguin * {
+  position: absolute;
+}
+
+  24. You can 'invert' axis of an element by using scaleX(-1); or scaleY(-1);
+
+  Observe the following code example:
+.arm.left {
+  top: 35%;
+  left: 5%;
+  transform-origin: top left; 
+  transform: rotate(130deg) scaleX(-1);
 }
 
                                     Things I need to look up:
