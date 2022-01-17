@@ -1,0 +1,353 @@
+Javascript Notes:
+
+1. The 'let' keyword:
+          In ES6 (a major update to Javascript), a new keyword called 'let' was introduced. 
+
+          One of the biggest problems with declaring variables with var keyword is that you can easily overwrite variable declariatons.
+
+          So, unlike the 'var' keyword, when you use 'let', a variable with the same name can only be declared once.
+
+2. The 'const' keyword:
+'const' has all the awesome features that let has, with the added bonus that variables declared using 'const' are read-only. They are a constant value, which means that once a variable is assigned with const, it cannot be reassigned. 
+
+3. When to use 'let' vs 'const' and so on and so forth:
+  - Use 'let' when you want the variable to change, and 'const' when you want the variable to remain constant. 
+
+
+
+4. ++ and -- operators
+
+You can increment or add one to a variable with the ++ operator.
+
+For example:
+i++; 
+is the equivalent of:
+i = i + 1;
+
+The entire line becomes i++;, eliminating the need for the equal sign.
+
+You can take code like:
+myVar = 88;
+myVar = myVar + 1;
+
+and simply rewrite it as:
+myVar = 88;
+myVar++;
+
+Now, you can decrement or remove one to a variable with the -- operator.
+
+For example:
+i--;
+is the equivalent of:
+i = i - 1;
+
+The entire line becomes i--;, eliminating the need for the equal sign.
+
+You can take code like:
+myVar = 88;
+myVar = myVar - 1;
+
+and simply rewrite it as:
+myVar = 88;
+myVar--;
+
+5. The '+=' operator:
+In programming, it's common to use assignments to modify the contents of a variable. Everything to the right of the equals sign is evaluated first, so we can say: 
+
+myVar = myVar + 5;
+
+This would add 5 to myVar. There is a better way to do this all in one step, using the '+=' operator.
+
+let myVar = 1;
+myVar += 5;
+console.log(myVar);
+
+You can, additionally, concatenate a string onto the end of an existing string variable. This can be very helpful to break a long string over several lines.
+
+Example: 
+let myStr = "This is the first sentence. "
+myStr += "This is the second sentence."
+console.log(myStr);
+
+outputs:
+This is the first sentence. This is the second sentence. 
+
+Additionally, take a look at this example as well:
+
+const someAdjective = "cool.";
+let myStr = "My cat thinks I'm ";
+myStr += someAdjective;
+
+This would cause console.log(myStr); to register as the following sentence:
+My cat thinks I'm cool.
+
+6. The '*=' operator:
+It works similar to the operator listed in #5, but it multiplies.
+
+  myVar = myVar * 5;
+  can be rewritten as:
+  myVar *= 5;
+
+7. The '/=' operator:
+Same as above, but it divides.
+  myVar = myVar / 5;
+  can be rewritten as:
+  myVar /= 5;
+
+  8. Using backslashes in quote/word strings to use things like quotes inside of quote strings.
+
+  const myStr = "I am a \"double quoted\" string inside \"double quotes\".";
+
+  This would produce text that says:
+  I am a "double quoted" string inside "double quotes".
+
+  7. Escape Sequences in Strings:
+  There are two reasons to use escaping characters:
+  1. To allow you to use characters you may not otherwise be able to type out, such as a carriage return.
+  2. To allow you to represent multiple quotes in a string without JavaScript misinterpreting what you mean.
+
+  Types of Escape Sequences:
+  Single quote: \'
+  Double quote: \"
+  Backslash: \\
+  Newline: \n
+  Carriage return: \r 
+  Tab: \t
+  Word Boundary: \b
+  Form Feed: \f
+
+  ---- Take a look at this example: ---
+  const myStr = "FirstLine\n\t\\SecondLine\n\ThirdLine"; 
+
+  This would output the following code when using console.log(myStr); :
+
+  myStr:
+FirstLine
+	\SecondLine
+ThirdLine
+
+8. You can construct links with variables in them:
+
+const linkName = "freeCodeCamp";
+const myLink = "https://www." + linkName + ".org";
+console.log(myLink);
+
+This would produce:
+https://www.freeCodeCamp.org
+
+9. You can get the last letter of a string by subtracting one from the string's length.
+
+Take a look at this example:
+
+const dogName = "Chonk";
+const lastLetterOfDogName = dogName[dogName.length -1];
+console.log(lastLetterofDogName);
+
+The console output would simply be the last letter of dogName, which is k.
+
+10. To go along with #9's tip, you can also use the length property to get different characters of a string.
+
+For example:
+const firstName = "John";
+const thirdToLastLetter = firstName[firstName.length -3];
+console.log(thirdToLastLetter);
+
+The console output would simply be the 3rd to last letter of the firstName (John), so the letter would be o.
+
+11. You can also create sentences out of several constants, observe the following code:
+
+const myNoun = "dog";
+const myAdjective = "big";
+const myVerb = "ran";
+const myAdverb = "quickly";
+
+const wordBlanks = "The " + myAdjective + " " + myNoun + " " + myVerb + " " + myAdverb + ".";
+
+console.log(wordBlanks);
+
+This would produce the following sentence:
+The big dog ran quickly.
+
+12. Arrays
+
+You can create an array by following the code below as reference:
+const arrayName = ["Dogs", "Cats", "Horses"];
+
+You can also include numbers as well:
+const arrayName = ["Dogs", 3, "Cats", 4, "Horses"];
+
+You can also NEST an array within another array, observe the following code:
+const arrayName = [["Chocolate", 24], ["Cats", 43]];
+
+You can also access array data with indexes.
+
+Example:
+const arrayName = [20, 30, 40];
+arrayName[0];
+const myData = arrayName[2];
+
+console.log(arrayName);
+console.log(myData);
+
+13. Multi-dimensional arrays, or... Arrays within Arrays [w/ indexes]
+
+Observe the following code:
+const myArray = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+  [[10, 11, 12], 13, 14],
+];
+
+const myData = myArray[0][0];
+
+by default, myData would be equal to the first array's first variable (1, in this case)
+
+However, we can select the number '8' by changing it to the following code, for reference:
+
+
+const myArray = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+  [[10, 11, 12], 13, 14],
+];
+
+const myData = myArray[2][1];
+
+console.log(myData);
+
+console.log(myData) would end up returning the number 8, because myArray[2][1] accesses the third array's second indexed variable.
+
+Another example of an array with other arrays (sub-arrays) can be found below:
+
+const myList = [ 
+  ["Beef Steak", 2],
+  ["Canned Corn", 12],
+  ["Chicken Hotdog", 2],
+  ["Oreo Sundae Pie", 1],
+  ["Orange Juice", 1]
+];
+
+14. Manipulating arrays with push()
+
+You can easily append data to the end of an array using the push() function.
+
+push() takes one or more arguments and 'pushes' them to the end of an array.
+
+Observe the following code example:
+const randomArray = [["Pepper", "Salt", 250], ["Lemon", "Buffalo", 2]];
+
+randomArray.push(["Wallpaper", 222, "Movies", "Video Games"]);
+
+console.log(myArray);
+
+In this scenario, console.log(randomArray); would return the following:
+  [ [ 'Pepper', 'Salt', 250 ], [ 'Lemon', 'Buffalo', 2 ], [ 'Wallpaper', 222, 'Movies', 'Video Games' ] ]
+
+  15. The pop() function.
+
+  pop() can be used to pop a value off the end of an array. Any type of entry works with  the pop() function (numbers, strings, and nested arrays).
+
+  Take a look at the following example:
+  const randArray = [["Icecream", "Candy bars", "Soup", 42], ["Jerky", "Gum", "Crackers", 24]];
+
+  const minusArray = randArray.pop()
+  console.log(randArray);
+
+  This would return the following:
+  [ [ 'Icecream', 'Candy Bars', 'Soup', 42] ]
+
+  16. The shift() function.
+
+  shift() can be used to remove the first element in an array. Observe the following code:
+
+  const randArray = [["Cat", 2], ["Dog", 3]];
+  const removedArray = randArray.shift();
+  console.log(randArray);
+
+  In the code above, console.log(randArray); would now produce the below result:
+  [ [ 'Cat', 2] ]
+
+  17. The unshift() function.
+
+  unshift() can essentially add elements in the beginning of an array, instead of at the end like push() does.
+
+  Observe the following code example:
+  const myArray = [["Dog", 24], ["Horse", 7]];
+  //myArray.shift();
+  myArray.unshift(["Cat", 44]);
+  console.log(myArray);
+
+  In this example, console.log(myArray); would produce the following:
+  [ [ 'Cat', 44 ], [ 'Dog', 24 ], [ 'Horse', 7 ] ]
+
+  If you were to uncomment the currently commented code, it would shift the first element out of the array, then unshift would add "Cat", 44 to the beginning.
+
+  Observe the example:
+    const myArray = [["Dog", 24], ["Horse", 7]];
+    myArray.shift();
+    myArray.unshift(["Cat", 44]);
+    console.log(myArray); 
+
+  In this example, the console.log(myArray); would produce the following:
+  [ [ 'Cat', 44 ], [ 'Horse', 7 ] ]
+
+  18. Functions in JavaScript
+  Functions can be used in JavaScript to divide up code into reusable parts.
+
+  Observe the following example:
+
+  function functionName() {
+    console.log("This is a function!");
+  }
+  functionName();
+
+
+  The above code would produce:
+  This is a function!
+
+  As text. We can create and call functions throughout javascript, sometimes even calling a function multiple times throughout a project.
+
+  To pass values to functions with arguments, observe the following code:
+
+  function additionFunction(firstNum, secondNum) {
+    console.log(firstNum + secondNum);
+  }
+  additionFunction(2,2);
+  additionFunction(21,40);
+
+
+  The above code would run twice, the first time it would add the 2 variables (2 and 2), which would result in 4.
+
+  The second time it runs, it would add the first number of the second function (21) with the second number of the second function (40). The result would be 61.
+
+  So, the console.log output would simply say:
+  4
+  61
+
+  19. The return() statement inside a function().
+
+  We can pass values into functions with arguments. You can use the return statement to send a value back out of a function.
+
+  Observe the following code:
+
+  function timesFive(number) {
+    return number * 5;
+  }
+  timesFive(5);
+  timesFive(2);
+  timesFive(0);
+
+  This would run the timesFive function a total of 3 times, the first time it would multiply 5 by 5, resulting in 25.
+
+  The second time, it would be multiplying the number 2 by 5, resulting in 10.
+
+  The third and final time, it would be multiplying 0 by 5, resulting in 0.
+
+  The output on the console would simply look like:
+  25
+  10
+  0
+
+  20. 
