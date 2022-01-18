@@ -661,3 +661,177 @@ This would return as 'not equal'
   console.log(testLessThan(10));
 
   This would return "Under 25"
+
+  34. The <= operator.
+  The less than or equal to (<=) operator compares to see if the value of the number on the left is less than or equal to the value of the number on the right. 
+
+  If the value on the left is less than or equal to the number on the right, the value will be returned as true.
+
+  Otherwise, the value will be returned as false.
+
+  Examples
+  4 <= 5
+  '7' <= 7
+  5 <= 5 
+  3 <= 2
+  '8' <= 4
+
+  This would return the values of true, true, true, false, and false respectively.
+
+  Observe the operator at work in a function for another example:
+
+  function testLessOrEqual(val) {
+    if (val <= 12) { 
+      return "Smaller Than or Equal to 12"
+    }
+    if (val <= 24) {
+      return "Smaller Than or Equal to 24";
+    }
+
+    return "More than 24";
+  }
+
+  testLessOrEqual(10);
+  console.log(testLessOrEqual(10));
+
+  This would return "Smaller Than or Equal to 12"
+
+  35. The && operator
+
+  Called the "logical and" operator, it is used to test multiple conditions at the same time.
+
+  The && operator returns true if and only if the operands to the left and right of it are true.
+
+  Observe the below code which will be written long-hang, without the use of the && operator:
+
+  if (num > 5) {
+    if (num < 10) {
+      return "Yes";
+    }
+  }
+  return "No";
+
+  The following will only return Yes if num is greater than 5 and less than 10.
+
+  However, the same logic can be written with the logical and (&&) operator like so:
+
+  if (num > 5 && num < 10) {
+    return "Yes";
+  }
+    return "No";
+
+  Let's also take a look at a function example:
+
+  function testLogicalAnd(val) {
+    if (val <= 50 && val >= 25) {
+      return "Yes";
+    }
+    return "No";
+  }
+
+  testLogicalAnd(10);
+
+  This would return "No", as the number 10 is not BOTH equal less than or equal to 50 AND greater than or equal to 25. Although it is less than 50, it is not greater than or equal to 25, therefor it would return false and return a "No" in the case of the code displayed above.
+
+  36. The || operator
+  Also called the "logical or" operator. It returns true if either of the operands is true, otherwise, it returns false. 
+
+  The long-handed way to write an example that -could-, but does not currently use the || operator is as follows:
+
+  if (num > 10) {
+    return "No";
+  }
+  if (num < 5) {
+    return "No";
+  } 
+  return "Yes";
+
+  The above will return yes only if num is between 5 and 10. 
+
+  The same logic can, however, be simplified using the || operator.
+  It can be written as:
+
+  if (num > 10 || num < 5) {
+    return "No";
+  }
+  return "Yes";
+
+  ---------
+
+  We can use it in a function for an example as well:
+
+  function testLogicalOr(val) {
+    if (val < 10 || val > 20) {
+      return "Outside";
+    }
+    return "Inside";
+  }
+
+  testLogicalOr(15);
+  console.log(testLogicalOr(15));
+
+  This would return "Inside" because the number is between 10 and 20.
+
+  A number like 21, however, would return "Outside"
+
+  37. else statements. if else statements.
+
+  An else statement will execute an alternate block of code if the if statement turns out the be false.
+
+  For example:
+
+  if (num > 10) {
+    return "Bigger than 10";
+  } else {
+    return "10 or Less";
+  }
+  num(11); would return "Bigger than 10"
+
+  To use it in a function, take a look at this example:
+  
+  function testElse(val) {
+    let result = "";
+
+    if (val > 5) {
+      result = "Bigger than 5";
+    } else {
+      result = "5 or Smaller";
+    }
+
+    return result;
+    
+  }
+
+  testElse(4);
+  console.log(testElse(4)); would simply return '5 or Smaller'
+
+  38. else if statements.
+
+  In an event that you need to address multiple conditions, you can chain if statements together with else if statements.
+
+  For example:
+
+  if (num > 15) {
+    return "Bigger than 15";
+  } else if (num < 5) {
+    return "Smaller than 5";
+  } else {
+    return "Between 5 and 15";
+  }
+
+  To look at it inside of a function, however, observe the following code:
+
+  function testElseIf(val) {
+    if (val > 10) {
+      return "Greater than 10";
+    } else if (val < 5) {
+      return "Smaller than 5";
+    } else {
+      return "Between 5 and 10";
+    }
+
+    testElseIf(7);
+    console.log(testElseIf(7));
+    }
+  
+  This would return "Between 5 and 10"
