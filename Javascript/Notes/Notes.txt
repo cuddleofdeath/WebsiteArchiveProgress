@@ -350,4 +350,221 @@ In this scenario, console.log(randomArray); would return the following:
   10
   0
 
-  20. 
+  20. Global vs Local variables
+  It's possible to have both local and global variables with the same name. When you do this, the local variable takes precedence over the global variable.
+
+  Observe the following code as an example:
+
+  const dogBreed = "Greyhound";
+
+  function nextDogBreed() {
+    const dogBreed = "Chihuahua";
+    return dogBreed;
+  }
+
+  nextDogBreed(dogBreed);
+
+
+  This will return "Chihuahua", because in the function, we called the local version of the dogBreed const. However, the global version was not called in this case.
+
+  21. "Undefined" value returned from a function.
+
+  A function does not necessarily need to have a return statement, however, if a function is without a return statement, it will process the code but return the value as undefined.
+
+  Observe the following code:
+
+  let num = 0;
+
+  function addTwo() {
+    num = num + 2;
+  }
+
+  function addThree() {
+    num = num + 3;
+  }
+
+  addTwo();
+  addThree();
+  console.log(addThree());
+
+  would return undefined.
+
+  This can simply be remedied by adding 'return num' inside of this particular function.
+
+  22. Another example of 'returning' a specific value:
+
+  let processed = 0;
+
+  function processArg(num) {
+    return (num + 3) / 5;
+  }
+
+  processed = processArg(7);
+  console.log(processed);
+
+
+  This would return a value of '2' to the console log. 
+  This is because processed calls the processArg function with an argument of 7.
+
+  If you recall the processArg function, it is num + 3 / 5, which means that our num = 7, so the function is running the calculation of (7 + 3) / 5. This simplifies down to 10 / 5, which can further be simplified down to 2.
+
+  24. An example of an order queue function for Data Structure:
+
+  function nextInLine(arr, item) {
+    arr.push(item);
+    var removed = arr.shift();
+    return removed;
+  }
+
+  const testArr = [1, 2, 3, 4, 5];
+
+  console.log("Before: " + JSON.stringify(testArr));
+console.log(nextInLine(testArr, 6));
+console.log("After: " + JSON.stringify(testArr));
+
+
+This would display this in the console log:
+Before: [1,2,3,4,5]
+After: [2,3,4,5,6]
+
+
+
+  25. Boolean data type.
+
+  Booleans can either be true or false (no quotation marks). You can think of them as on and off switches, where true is on and false is off.
+
+  Observe the following code:
+
+  function testBool() {
+    return true;
+  }
+
+  console.log(testBool);
+
+  The console log would simply return the value of true.
+
+  26. if statements:
+  if statements tells JavaScript to execute speific code under specific conditions, defined in parantheses. These conditions are known as Boolean conditions and they may only be true or false.
+
+  When set to true, the program executes the statement inside the curcly braces. Whenever it's false, however, the statement inside the braces will not execute.
+
+  if (condition is true) {
+    statement is executed;
+  }
+
+  Observe the following code:
+
+  function trueOrFalse(wasThatTrue) {
+    if (wasThatTrue) {
+      return "Yes, that was true";
+    }
+    return "No, that was false";
+  }
+}
+
+  trueorFalse(false);
+
+  The above code would return "No, that was false"
+
+  27. =
+  The equals value assigns the value on the right to the variable on the left.
+
+  Example: 
+  variableA = 2;
+
+  28. == operator
+  The == operator, also called the equality operator, compares two values and returns true if they are equivalent or false if they're not.
+
+  Observe the following code example:
+
+  function testEqual(val) {
+    if (val == 12) {
+      return "Equal";
+    }
+    return "Not equal";
+  }
+
+  testEqual(10);
+  testEqual(12);
+
+  In the scenario with the above code, we would see "Not Equal" and "Equal", because with the result of testEqual(10);, we were seeing if 10 was equal to 12, which it is not, so it would return Not equal. However, testEqual(12); is simply seeing if 12 is equal to 12, which is is, so it would return "Equal".
+
+  29. === operator
+  === operator, or the Strict equality operator does not perform a type conversion. 
+
+  If the values being compared have different types, they are inherently considered to be unequal, causing the strict equality (===) operator to return 'false'.
+
+  Example:
+
+  3 === 3
+  3 === '3'
+
+  These conditions would return true and false respectively. In the above example, the first one is equal because the number 3 is equal to the number 3. However, the reason why the second one is false (3 === '3') is simply because the number 3 and a string of '3' are not technically the same thing.
+
+  We can also use a function as an example as well. Observe the following code below:
+
+  function testStrict(val) {
+    if (val === 7) {
+      return "Equal";
+    }
+    return "Not equal";
+  }
+
+  testStrict(10);
+
+  This would return as "not equal" because 10 is not 7.
+
+  30. The != operator.
+
+  The inequality operator is the exact opposite of the equality operator. It means not equal. It, like the equality operator, will convert data types of values while comparing.
+
+  Examples
+
+  1 != 2
+  1 != "1"
+  1 != '1'
+  1 != true
+  0 != false
+
+  In order, these expressions would evaluate to true, false, false, false, and false.
+
+  Looking at an example with a function, observe the following code:
+
+  function testNotEqual(val) {
+    if (val != 99) {
+      return "Not Equal";
+    }
+    return "Equal";
+  }
+
+  testNotEqual(10);
+
+This would return as 'not equal'
+
+  31. The !== operator.
+
+  It means "Strictly Not Equal" and is the opposite of the strict equality operator. 
+
+  The !== operator will return false when items are equivalent, and true whenever items are not equivalent to each other.
+
+  Examples
+  3 !== 3 
+  3 !== '3'
+  4 !== 3
+
+  These expressions would evaluate to false, true, and true.
+  False because 3 and 3 are equivalent to one another, true because 3 and '3' [a string] are not equivalent, and true because 4 is not equal to 3.
+
+  Observe the following code:
+
+  function testStrictNotEqual(val) {
+    if (val !== 17) {
+      return "Not Equal";
+    }
+    return "Equal";
+  }
+
+  testStrictNotEqual(10);
+
+
+  This would return "Not equal" because not equal is set to the function's 'true' section, which, in this case, because we used the strict inequality operator, it is true that 10 is NOT equal to 17.
